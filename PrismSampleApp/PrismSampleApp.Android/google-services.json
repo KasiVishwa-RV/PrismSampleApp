@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "402650890966",
+    "project_id": "xamarinsample-1179b",
+    "storage_bucket": "xamarinsample-1179b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402650890966:android:863c0fa7e8273cf1343f77",
+        "android_client_info": {
+          "package_name": "com.companyname.appname"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402650890966-fqaou5orbi1o5qv9272p4ocfji7aem22.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCut7Zwq7Xg3-ja_pI5F_FOOnwHdbPmFYg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402650890966-fqaou5orbi1o5qv9272p4ocfji7aem22.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

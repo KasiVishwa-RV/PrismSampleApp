@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="PrismSampleApp.Views.MainPage"
+             Title="Main Page">
+
+    <StackLayout VerticalOptions="Center"
+               Spacing="30">
+        <Button Text="Go To ApiContacs Page" Command="{Binding GoToApiContactsPageCommand}"/>
+        <Button Text="Go To Home Page" Command="{Binding GoToHomePageCommand}"/>
+        <Label Text="{xct:Translate HeaderText}" HorizontalTextAlignment="Center" FontSize="36" TextColor="Black"/>
+        <Label Text="{xct:Translate BodyText}" FontSize="Title" Padding="30,10,30,10" TextColor="Black"/>
+        <Picker ItemsSource="{Binding SupportedLanguage}"
+              ItemDisplayBinding="{Binding Name}"
+              SelectedItem="{Binding SelectedLanguage}" />
+
+        <Button Text="{xct:Translate Save}"
+              Command="{Binding ChangeLanguageCommand}" />
+    <StackLayout Orientation="Horizontal">
+            <Button Text="Turn ON FlashLight" Command="{Binding TurnOnFlashLightCommand}"/>
+            <Button Text="Turn OFF FlashLight" Command="{Binding TurnOffFlashLightCommand}"/>
+        </StackLayout>
+        
+    </StackLayout>
+</ContentPage>

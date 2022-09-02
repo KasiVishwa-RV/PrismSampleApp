@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrismSampleApp.Views.HomePage"
+             xmlns:prism="http://prismlibrary.com"
+            xmlns:viewmodels="clr-namespace:PrismSampleApp.ViewModels" 
+            x:DataType="viewmodels:HomePageViewModel"
+            prism:ViewModelLocator.AutowireViewModel="True">
+    <StackLayout>
+        <Button Text="Subscribe" Command="{Binding SubscribeCommand}" HorizontalOptions="CenterAndExpand"/>
+        <Button Text="Go to Messaging Center Page" Command="{Binding GoToMessagingCenterPageCommand}" HorizontalOptions="CenterAndExpand"/>
+        <Label Text="{Binding Messages}" BackgroundColor="Beige" HorizontalOptions="CenterAndExpand"/>
+    </StackLayout>
+</ContentPage>

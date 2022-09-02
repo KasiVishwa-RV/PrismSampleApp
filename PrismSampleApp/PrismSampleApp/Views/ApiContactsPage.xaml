@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="PrismSampleApp.Views.ApiContactsPage"
+             BackgroundImageSource="background.png"
+             xmlns:c="clr-namespace:PrismSampleApp.Converters;assembly=PrismSampleApp" 
+             xmlns:customrenderer="clr-namespace:PrismSampleApp.CustomControl">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <c:ItemTappedEventArgsConverter x:Key="itemTappedEventArgsConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+        <customrenderer:CustomEntryRenderer EntryBorderColor="DarkGoldenrod"
+                                 EntryCornerRadius="10"
+                                 Text="Random Users"
+                                 HorizontalOptions="CenterAndExpand"
+                                 WidthRequest="220"/>
+        <ListView RowHeight="60" ItemsSource="{Binding ApiContacts}" BackgroundColor="#00FFFFFF">
+            <ListView.Behaviors>
+                <prism:EventToCommandBehavior EventName="ItemTapped"
+                                          Command="{Binding ItemTappedCommand}"
+                                          EventArgsConverter="{StaticResource itemTappedEventArgsConverter}"/>
+            </ListView.Behaviors>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.RowSpan="2" Source="{Binding Picture.Large}" Aspect="AspectFill"/>
+                            <Label Text="Name:" Grid.Row="0" Grid.Column="1" FontAttributes="Bold"   HorizontalOptions="Start" VerticalOptions="Center" TextColor="Black"/>
+                            <Label Text="{Binding Name.First}" Grid.Row="0" Grid.Column="2" HorizontalOptions="Start" VerticalOptions="Center" TextColor="White"/>
+                            <Label Text="Location:" Grid.Row="1" Grid.Column="1"  FontAttributes="Bold" VerticalOptions="CenterAndExpand" TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="Start" />
+                            <Label Text="{Binding Location.Country}" Grid.Row="1" Grid.Column="2"  HorizontalOptions="Start" VerticalOptions="Center" TextColor="White"/>
+                            </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.Header>
+                <Button Command="{Binding ClickCommand}" BackgroundColor="Crimson" Text="Random Users"/>
+            </ListView.Header>
+        </ListView>
+    </StackLayout>
+</ContentPage>
