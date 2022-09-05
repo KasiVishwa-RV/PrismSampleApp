@@ -46,7 +46,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
             <ListView.Header>
-                <Button Command="{Binding ClickCommand}" BackgroundColor="Crimson" Text="Random Users"/>
+                <Button Command="{Binding ClickCommand}" BackgroundColor="NavajoWhite" Text="Random Users"/>
             </ListView.Header>
         </ListView>
     </StackLayout>
