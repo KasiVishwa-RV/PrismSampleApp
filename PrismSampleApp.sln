@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismSampleApp.iOS", "Prism
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismSampleApp.UWP", "PrismSampleApp\PrismSampleApp.UWP\PrismSampleApp.UWP.csproj", "{C8D44EF1-94D3-4E6D-80D4-3AC85B02C81D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{AD95E7D8-6F8A-42C5-AD22-2C6CB2D10CE7}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrismSampleApp.UnitTest", "PrismSampleApp.UnitTest\PrismSampleApp.UnitTest.csproj", "{D6523D2D-C5AF-4FA7-AE41-7CC122E1D8BB}"
 EndProject
 Global
@@ -308,9 +306,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{D6523D2D-C5AF-4FA7-AE41-7CC122E1D8BB} = {AD95E7D8-6F8A-42C5-AD22-2C6CB2D10CE7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {97E9688C-CF18-4492-B4A6-E9DC317C681A}
