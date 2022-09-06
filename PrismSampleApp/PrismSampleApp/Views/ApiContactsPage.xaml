@@ -13,7 +13,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <StackLayout>
-        <customrenderer:CustomEntryRenderer EntryBorderColor="DarkGoldenrod"
+        <customrenderer:CustomEntryRenderer EntryBorderColor="DarkMagenta"
                                  EntryCornerRadius="10"
                                  Text="Random Users"
                                  HorizontalOptions="CenterAndExpand"
